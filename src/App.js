@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+
+import { Card } from 'react-bootstrap';
 import './App.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Card style={{ backgroundColor:'red', width: '20rem' }}>
+      <Card.Body>
+      <Form >
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label className='inf'>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label className='inf'>Name</Form.Label>
+        <Form.Control type="text" placeholder="Name" />
+        
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label className='inf'>Phone</Form.Label>
+        <Form.Control type="text" placeholder="Phone" />
+        
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label className='inf'>Adress</Form.Label>
+        <Form.Control type="text" placeholder="Adress" />
+        
+      </Form.Group>
+
+     
+     
+      <Button style={{background : 'red', color:'white', borderColor: 'white' }} >
+        Register
+      </Button>
+    </Form>
+      </Card.Body>
+    </Card>
     </div>
   );
 }
